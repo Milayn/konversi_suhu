@@ -17,7 +17,7 @@ class _MyAppState extends State<MyApp> {
   // This widget is the root of your application.
   double inputUser = 0;
   double kelvin = 0;
-  double fahrenheit = 0;
+  // double fahrenheit = 0;
   double reamur = 0;
 
   final temperatureController = TextEditingController();
@@ -31,7 +31,7 @@ class _MyAppState extends State<MyApp> {
     inputUser = double.parse(temperatureController.text);
     setState(() {
       reamur = (0.8 * inputUser);
-      fahrenheit = (inputUser * 1.8) + 32;
+      // fahrenheit = (inputUser * 1.8) + 32;
       kelvin = inputUser + 273.15;
     });
   }
@@ -74,13 +74,13 @@ class _MyAppState extends State<MyApp> {
                             style: TextStyle(fontSize: 30)),
                       ],
                     ),
-                    Column(
-                      children: [
-                        Text("Fahrenheit", style: TextStyle(fontSize: 20)),
-                        Text(fahrenheit.toStringAsFixed(2),
-                            style: TextStyle(fontSize: 30)),
-                      ],
-                    ),
+                    // Column(
+                    //   children: [
+                    //     Text("Fahrenheit", style: TextStyle(fontSize: 20)),
+                    //     Text(fahrenheit.toStringAsFixed(2),
+                    //         style: TextStyle(fontSize: 30)),
+                    //   ],
+                    // ),
                     Column(
                       children: [
                         Text("Reamur", style: TextStyle(fontSize: 20)),
